@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #000000;
+}
+
+input[type="text"], textarea, input[type="text"]:disabled, select {
+
+  background-color : #000000;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: gray;
+  color: white !important;
+}
+
+label, strong, input, i {
+  color: white !important;
+}
+
+.container {
+  margin: 20px auto;
+  width: 50%;
+  height: 50%;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.box {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+  color: #fff;
+  display: inline-table;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.health-bar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200px;
+    height: 20px;
+    padding: 5px;
+    background: #632122;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 3px;
+    position: relative;
+  }
+
+.bar1 {
+  background: #632122;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  
+  transition: width .5s linear;
+}
+  
+.hit {
+  background: rgba(255,255,255,0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0px;
+  
+  transition: width .5s linear;
+}
+
+.sanity-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  background: #00154e;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.bar2 {
+  background: #00154e;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  
+  transition: width .5s linear;
+}
+
+.ocultism-bar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  height: 20px;
+  padding: 5px;
+  background: #300151;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.bar3 {
+  background: #300151;
+  width: 100%;
+  height: 10px;
+  position: relative;
+  
+  transition: width .5s linear;
+}
+
+.input-bold {
+  font-weight: bold;
+}
+
+.input-style {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.btn-stylized {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.input-style-bar {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+#firstdice, 
+#sanityDice, 
+#apparenceDice, 
+#constitutionDice, 
+#dexterityDice, 
+#educationDice, 
+#forceDice, 
+#intelligenceDice, 
+#powerDice, 
+#luckDice,
+#editOption,
+#attOption,
+#editView,
+#editAdd,
+#editRemove,
+#removeOption,
+#addOption,
+#viewOption,
+#editAtributoOption,
+#saveAtributoOption,
+#editPericiasOption,
+#savePericiasOption {
+  cursor: pointer;
+}
+
+#expertisecheckbox {
+  display: table-row;
+  margin-bottom: 17px;
+  margin-right: -7px;
+}
+
+body > div.container > div > div:nth-child(8) > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(1):hover,
+body > div.container > div > div:nth-child(8) > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(2):hover,
+body > div.container > div > div:nth-child(8) > form > div:nth-child(3) > div:nth-child(2) > div:nth-child(3):hover,
+body > div.container > div > div:nth-child(8) > form > div:nth-child(3) > div:nth-child(3) > div:nth-child(1):hover,
+body > div.container > div > div:nth-child(8) > form > div:nth-child(3) > div:nth-child(3) > div:nth-child(2):hover,
+body > div.container > div > div:nth-child(8) > form > div:nth-child(3) > div:nth-child(3) > div:nth-child(3):hover {
+  background-color: darkgray;
+}
+
+#detalheModal > div > div > div.modal-footer > input:hover,
+#combatModal > div > div > div.modal-footer > input:hover,
+#expertiseModal > div > div > div.modal-footer > input:hover,
+#attributeModal > div > div > div.modal-footer > input:hover,
+body > div.container > div > div.col-sm-8 > form > div:nth-child(1) > div:nth-child(2) > input:hover {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+#ritualArea,
+#vritualArea {
+  width: inherit !important;
+  background-color: #000000 !important;
+  text-decoration: none !important;
+}
+
+.scrollClass{
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.scrollClassPer{
+  height: 460px !important;
+  overflow-y: scroll !important;
+}
+
+.periciaBox{
+  padding: 22px;
+  display: flex;
+  text-align-last: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+#periciaTable > .periciaBox:hover{
+  background-color: darkgray;
+}
+
+.periciaFont{
+  width: 70px;
+  font-size: x-large;
+}
