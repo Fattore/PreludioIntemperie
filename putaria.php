@@ -101,19 +101,19 @@ $luck =  $_POST['luck'];
 $moviment =  $_POST['moviment'];
 $size =  $_POST['size'];
 
-$sql_atributos = "INSERT INTO Atributo(Aparencia_Atributo,Constituicao_Atributo,Destreza_Atributo,Educacao_Atributo,Forca_Atributoe,Inteligencia_Atributo,Poder_Atributo,Sorte_Atributo,Movimento_Atributo,Tamanho_Atributo) VALUES ('$apparence','$constitution','$dexterity','$education','$force','$intelligence','$power','$luck','$moviment',$size')";
+$sql = "INSERT INTO Atributo(Aparencia_Atributo,Constituicao_Atributo,Destreza_Atributo,Educacao_Atributo,Forca_Atributoe,Inteligencia_Atributo,Poder_Atributo,Sorte_Atributo,Movimento_Atributo,Tamanho_Atributo) VALUES ('$apparence','$constitution','$dexterity','$education','$force','$intelligence','$power','$luck','$moviment',$size')";
     
-$sql_combate = "INSERT INTO Combate(Nome_Combate,Tipo_Combate,Dano_Combate,MunicaoAT_Combate,MunicaoMX_Combate,Ataque_Combate,Alcance_Combate,Defeito_Combate,Area_Combate) VALUES ('$combatNome','$combatTipo','$combatDano','$combatMunAtual','$combatMunMax','$combatAtaque','$combatAlcance','$combatDefeito','$combatArea')";
+$sql .= "INSERT INTO Combate(Nome_Combate,Tipo_Combate,Dano_Combate,MunicaoAT_Combate,MunicaoMX_Combate,Ataque_Combate,Alcance_Combate,Defeito_Combate,Area_Combate) VALUES ('$combatNome','$combatTipo','$combatDano','$combatMunAtual','$combatMunMax','$combatAtaque','$combatAlcance','$combatDefeito','$combatArea')";
 
         
-$sql_detalhepessoal = "INSERT INTO DetalhePessoal(Nome_DPessoal, Jogador_DPessoal, Ocupaco_DPessoal, Idade_DPessoal, Genero_DPessoal, Nascimento_DPessoal, Residencia_DPessoal) VALUES ('$dtname','$dtplayer','$dtocuppation','$dtyears','$dtgenre','$dtbirthplace','$dthome')";
+$sql .= "INSERT INTO DetalhePessoal(Nome_DPessoal, Jogador_DPessoal, Ocupaco_DPessoal, Idade_DPessoal, Genero_DPessoal, Nascimento_DPessoal, Residencia_DPessoal) VALUES ('$dtname','$dtplayer','$dtocuppation','$dtyears','$dtgenre','$dtbirthplace','$dthome')";
     
-$sql_interface = "INSERT INTO Interface(Imagem_Interface,Uploaded_Interface,VidaMax_Interface,VidaAt_Interface,SanidadeMax_Interface,SanidadeAt_Interface,OcultismoMax_Interface,OcultismoAt_Interface,DanoEx_Interface,Corpo_Interface,ExposicaoP_Interface) VALUES ('$actuallife','$maxlife','$actualsanity','$maxsanity','$actualocultism','$maxocultism','$extradamage','$body','$paranormal')";
+$sql  .= "INSERT INTO Interface(Imagem_Interface,Uploaded_Interface,VidaMax_Interface,VidaAt_Interface,SanidadeMax_Interface,SanidadeAt_Interface,OcultismoMax_Interface,OcultismoAt_Interface,DanoEx_Interface,Corpo_Interface,ExposicaoP_Interface) VALUES ('$actuallife','$maxlife','$actualsanity','$maxsanity','$actualocultism','$maxocultism','$extradamage','$body','$paranormal')";
 
-$sql_inventario = "INSERT INTO Inventario(PesoAT_Inventario,Nome_Inventario,Tipo_Inventario,Peso_Inventario) VALUES ('$pesoAtual','$itemNome','$itemTipo','$itemPeso')";
+$sql  .= "INSERT INTO Inventario(PesoAT_Inventario,Nome_Inventario,Tipo_Inventario,Peso_Inventario) VALUES ('$pesoAtual','$itemNome','$itemTipo','$itemPeso')";
 
 
-$sql_perica = "INSERT INTO Pericias(Antropologia_Pericia,Arco_Pericia,Pistola_Pericia,Rifle_Pericia,Arqueologia_Pericia,Arremessar_Pericia,Arte_Pericia,Avaliacao_Pericia,Charme_Pericia,Chaveiro_Pericia,Ciencia_Pericia,ConEle_Pericia,ConMec_Pericia,Contabilidade_Pericia,Direito_Pericia,Dirigir_Pericia,Disfarce_Pericia,Eletronica_Pericia,Encontrar_Pericia,Escalar_Pericia,Escutar_Pericia,Esquivar_Pericia,Furtividade_Pericia,Historia_Pericia,Intimidacao_Pericia,Labia_Pericia,LinguaNat_Pericia,LinguaOut_Pericia,Lutar_Pericia,Medicina_Pericia,MundoNat_Pericia,Natacao_Pericia,Credito_Pericia,Ocultismo_Pericia,Maquinario_Pericia,Persuasao_Pericia,Pilotar_Pericia,Prestidigitacao_Pericia,Socorros_Pericia,Psicanalise_Pericia,Psicologia_Pericia,Rastrear_Pericia,Saltar_Pericia,Seduzir_Pericia,Sobrevivencia_Pericia,Biblioteca_Pericia,Computador_Pericia VALUES ('$antropologia','$arco','$pistola','$rifle',
+$sql .= "INSERT INTO Pericias(Antropologia_Pericia,Arco_Pericia,Pistola_Pericia,Rifle_Pericia,Arqueologia_Pericia,Arremessar_Pericia,Arte_Pericia,Avaliacao_Pericia,Charme_Pericia,Chaveiro_Pericia,Ciencia_Pericia,ConEle_Pericia,ConMec_Pericia,Contabilidade_Pericia,Direito_Pericia,Dirigir_Pericia,Disfarce_Pericia,Eletronica_Pericia,Encontrar_Pericia,Escalar_Pericia,Escutar_Pericia,Esquivar_Pericia,Furtividade_Pericia,Historia_Pericia,Intimidacao_Pericia,Labia_Pericia,LinguaNat_Pericia,LinguaOut_Pericia,Lutar_Pericia,Medicina_Pericia,MundoNat_Pericia,Natacao_Pericia,Credito_Pericia,Ocultismo_Pericia,Maquinario_Pericia,Persuasao_Pericia,Pilotar_Pericia,Prestidigitacao_Pericia,Socorros_Pericia,Psicanalise_Pericia,Psicologia_Pericia,Rastrear_Pericia,Saltar_Pericia,Seduzir_Pericia,Sobrevivencia_Pericia,Biblioteca_Pericia,Computador_Pericia VALUES ('$antropologia','$arco','$pistola','$rifle',
 '$arqueologia','$arremessar','$arte','$avaliacao',
 '$charme','$chaveiro','$ciencia','$eletrica',
 '$mecanico','$contabilidade','$direito','$auto',
@@ -125,13 +125,11 @@ $sql_perica = "INSERT INTO Pericias(Antropologia_Pericia,Arco_Pericia,Pistola_Pe
 '$persuasao','$pilotar','$prestidigitacao','$socorros',
 '$psicanalise','$psicologia','$rastrear','$saltar',
 '$seduzir','$sobrevivencia','$biblioteca','$computador')";
-$sql_ritual = "INSERT INTO Ritual(Nome_Ritual,Elemento_Ritual,Conjuracao_Ritual,Efeito_Ritual,Custo_Ritual) VALUES ('$ritualNome','$ritualElemento','$ritualConjuracao','$ritualEfeito','$ritualCusto')";
+$sql .= "INSERT INTO Ritual(Nome_Ritual,Elemento_Ritual,Conjuracao_Ritual,Efeito_Ritual,Custo_Ritual) VALUES ('$ritualNome','$ritualElemento','$ritualConjuracao','$ritualEfeito','$ritualCusto')";
 
-mysqli_query($conn, $sql_atributos);
-mysqli_query($conn, $sql_combate);
-mysqli_query($conn, $sql_detalhepessoal);
-mysqli_query($conn, $sql_interface);
-mysqli_query($conn, $sql_inventario);
-mysqli_query($conn, $sql_perica);
-mysqli_query($conn, $sql_ritual);
-mysqli_close($conn);
+
+if ($conn->multi_query($sql) === TRUE) {
+        echo "New records created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
